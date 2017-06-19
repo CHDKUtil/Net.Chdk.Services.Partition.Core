@@ -1,0 +1,12 @@
+﻿namespace Net.Chdk.Services.Partition
+{
+    public interface IPartitionService
+    {
+        void CreateSinglePartition(string driveLetter);
+        void CreatePartitions(string driveLetter);
+        bool SwitchPartitions(string driveLetter);
+        void UpdateProperties(string driveLetter);
+        PartitionType[] GetPartitionTypes(string driveLetter);
+        bool? TestSwitchedPartitions(PartitionType[] partTypes);
+    }
+}
